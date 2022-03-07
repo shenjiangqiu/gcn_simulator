@@ -1,0 +1,26 @@
+[package]
+edition = "2021"
+name = "gcn_agg"
+version = "0.2.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "Aggregates GCN data"
+license = "MIT"
+
+[dependencies]
+ramulator_wrapper = "0.2"
+
+itertools = "0.10"
+lazy_static = "1.4"
+log = "0.4"
+pipe_sim = {version="0.2.2", path = "../pipe_sim"}
+chrono = "0.4.8"
+clap = {version = "3.1.1", features = ["derive"]}
+config = "0.12"
+glob = "0.3"
+serde = {version = "1.0", features = ["derive"]}
+serde_json = "1.0"
+clap_complete = "3.1"
+pretty_env_logger = "0.4"
+enum-as-inner="0.4"
+[dev-dependencies]
