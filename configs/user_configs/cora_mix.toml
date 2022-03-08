@@ -1,0 +1,24 @@
+description = "cora mixed configuration"
+features_paths = ["nodefeatures/cora-0.txt", "nodefeatures/cora-1.txt", "nodefeatures/cora-2.txt"]
+graph_path = "graphs/cora.graph"
+
+[accelerator_settings]
+agg_buffer_size = 16777216
+gcn_hidden_size = [256, 256]
+gcn_layers = 3
+input_buffer_size = 4194304
+mem_config_name = "HBM-config.cfg"
+running_mode = "Mixed"
+[accelerator_settings.aggregator_settings]
+dense_cores = 16
+dense_width = 32
+sparse_cores = 16
+sparse_width = 2
+[accelerator_settings.mlp_settings]
+mlp_sparse_cores = 32
+systolic_cols = 32
+systolic_rows = 128
+[accelerator_settings.sparsifier_settings]
+sparsifier_cols = 32
+sparsifier_cores = 32
+sparsifier_width = 32
